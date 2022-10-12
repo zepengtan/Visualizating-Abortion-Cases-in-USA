@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Abortion Cases in United States</title>
+</head>
+<body>
+    <div class="page">
+        <div>
+            <h1 class="main-title"><span class = 'special-title'>ABORTION</span> IN <span class = 'special-title2'>USA</span></h1>
+            <h5 class="sub-heading">A comparitive study of abortion cases in the United States of America for different age groups from the year 1983 - 2017. </h4>
+        </div>
+
+        <div>
+            <h4 class="map-title">Abortion Cases in Each State, 2017</h4>
+            <div id="map" class="vis-container-map"></div> 
+        </div>
+
+        <div class="line-container">
+            <h4 class="line-title">Detailed Abortion Cases from 1983 - 2017</h4>
+            <div class="flex-line-paragraph">
+                <div class="left-par">
+                    <p>The sudden decrease in cases in 1988, 1992, 1996, and 2000 might be due to missing data. 
+                        However, it is clear to see that abortion cases have <span class="bold">dropped rapidly since 2005</span>. 
+                        According to studies, this might be due to <span class="underline">birth and pregnancy declines.</span> </p></div>
+                <div class="right-par">
+                    <p>Women aged <span class="bold">20 - 34</span> contribute the most toward abortion cases. 
+                        This is logical as this is the period when young adults and adults are mature. 
+                        They <span class="underline">might not want to settle down</span> and form a family, thus deciding to perform abortions. </p></div>
+            </div>
+            <div class="vis-container-line" id = "line"></div>
+        </div>
+
+        <div class="bar-container">
+            <h4 class="bar-title">Detailed Abortion Cases in Each State, 2017</h4>
+            <div class="flex-line-paragraph">
+                <div class="left-par">
+                    <p>The <span class="bold">South</span> has more total abortion cases in 2017, followed by the <span class="bold">Northeast</span>. These are New York, Maryland, 
+                        District of Columbia, and New Jersey. Similarly, women aged 20 - 34 contribute the most in these states. </p></div>
+                <div class="right-par">
+                    <p>However, an interesting observation is that the rate of cases for women aged <span class="red">35 - 39</span> is higher compared to other states. 
+                        Thus, this might lead to an overall high abortion case rate. </span>.
+                    </p></div>
+            </div>
+            <div class="vis-container-bar" id = "bar"></div>
+        </div>
+
+        
+        <div class="bump-container">
+            <h4 class="bump-title">Ranking of Abortion Cases Across the Year in Different States</h4>
+            <div class="flex-line-paragraph">
+                <div class="left-par">
+                    <p><span class="purple">New York</span> and <span class="orange">District of Columbia</span> have consistently ranked top 5 across the years. 
+                        However, New York has ranked above Top 2 since 2000 while District of Colombia has 
+                        dropped below Top 4 since 2010. </p></div>
+                <div class="right-par">
+                    <p><span class="navy">New Jersey</span> has climbed in ranking since 2009. While <span class="red">California</span> has dropped in ranking 
+                        since 1988. This is also similar with <span class="green">Hawaii</span>.
+                    </p></div>
+            </div>
+            <div id="bump" class="vis-container-bump"></div> 
+        </div>
+
+        <div class="end">
+            <p>This is a work by Tan Ze Peng for FIT3179 Data Visualization</p>
+        </div>
+
+    </div>
+</body>
+</html>

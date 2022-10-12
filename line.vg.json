@@ -1,0 +1,132 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "vconcat": [
+        {
+            "width" : 943,
+            "height" : 300,
+            "data" : {"url" : "data/Abortion_Line.csv"},
+            "layer" : [
+                {
+                    "transform" : [
+                        {
+                            "calculate" : "indexof(['<15', '15-17', '18-19', '20-24', '25-29', '30-34', '35-39', '>40'], datum.Variable)",
+                            "as": "order"
+                          }
+                    ],
+                    "mark" : {"type" : "line", "point" : true},
+                    "encoding" : {
+                        "x" : {
+                            "field" : "Year",
+                            "type" : "temporal",
+                            "title" : " ",
+                            "scale" : {
+                                "domain" : {
+                                    "param" : "brush"
+                                }
+                            
+                            }
+                        },
+                        "y" : {
+                            "field" : "Value",
+                            "type" : "quantitative",
+                            "scale" : {
+                                "type" : "linear"
+                            },
+                            "title" : "Abortion Cases"
+                        },
+                        "color" : {
+                            "field" : "Age Group",
+                            "scale" : {
+                                "domain" : ["<15", "15-17", "18-19", "20-24", "25-29", "30-34", "35-39", ">40"],
+                                "range": [
+                                  "#0077bb",
+                                  "#33bbee",
+                                  "#009988",
+                                  "#999933",
+                                  "#ddcc77",
+                                  "#ee7733",
+                                  "#cc3311",
+                                  "#ee3377"
+                                ]
+                              }
+                        },
+                        "order" : {"field" : "order", "type" : "ordinal"},
+                        "tooltip" : [
+                            {"field" : "Year", "type" : "temporal", "format" : "%Y"},
+                            {"field" : "Age Group", "type" : "nominal"},
+                            {"field" : "Value", "type" : "quantitative"}
+                        ]
+                    }
+                },
+                {
+                    "mark" : {
+                        "type" : "text",
+                        "align" : "right",
+                        "baseline" : "bottom" ,
+                        "dx" : -10,
+                        "dy" : -273,
+                        "x" : "width",
+                        "y" : "height",
+                        "fontSize" : 14,
+                        "text" : ["20-24 has the most number of abortion cases."],
+                        "fontWeight" : "normal",
+                        "color" : "#75767b"
+                    }
+                }
+            ]
+        },
+        {
+            "width" : 943,
+            "height" : 150,
+            "data" : {"url" : "data/Abortion_Line.csv"},
+            "layer" : [
+                {
+                    "params" : [
+                        {"name" : "brush", "select" : {"type" : "interval", "encodings" : ["x"]}}
+                    ],
+                    "mark" : {"type" : "line", "point" : true},
+                    "encoding" : {
+                        "x" : {
+                            "field" : "Year",
+                            "type" : "temporal"
+                        },
+                        "y" : {
+                            "field" : "Value",
+                            "type" : "quantitative",
+                            "aggregate" : "sum",
+                            "title" : "Total Abortion Cases"
+                        },
+                        "tooltip" : [
+                            {"field" : "Year", "type" : "temporal", "format" : "%Y"},
+                            {"field" : "Value", "aggregate" : "sum", "type" : "quantitative", "title" : "Value"}
+                        ]
+                    }
+                    
+                },
+                {
+                    "mark" : {
+                        "type" : "text",
+                        "align" : "right",
+                        "baseline" : "bottom" ,
+                        "dx" : -10,
+                        "dy" : -80,
+                        "x" : "width",
+                        "y" : "height",
+                        "fontSize" : 14,
+                        "text" : ["Abortion Cases decline rapidly", "from the year 2005"],
+                        "fontWeight" : "normal",
+                        "color" : "#75767b"
+                    }
+                }
+            ]
+        }
+    ],
+    "config" : {
+        "background" : "#f6f1ea",
+        "axis" : {
+          "labelColor" : "#75767b",
+          "titleColor": "#55565b"
+      }    
+    }
+}

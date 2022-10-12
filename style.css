@@ -1,0 +1,184 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    background-color: #f6f1ea;
+}
+
+.page {
+    width: 1100px;
+    background-color: #f6f1ea;
+    margin: auto;
+    /* padding: 30px; */
+    padding-top: 5px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 8px;
+}
+
+.special-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 8px;
+    color: red;
+}
+
+.special-title2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 8px;
+    color: blue;
+}
+
+
+.sub-heading {
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+.map-title {
+    text-align: center;
+    padding: 0;
+    margin : 0;
+}
+
+.vis-container-map {
+    width: 100%;
+    padding: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.map-title {
+    text-align: center;
+    padding: 0;
+    margin : 0;
+    margin-top: 10px;
+}
+
+.bar-container {
+    text-align: center;
+    margin-top: 50px;
+    width: 1100px;
+}
+
+.bump-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.line-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.line-title {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bar-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bump-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.flex-line-paragraph {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+    
+}
+
+.left-par {
+    width: 500px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.right-par {
+    width: 500px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.bold {
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+.end {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 10px;
+    color: #616161;
+}
+
+.red {
+    color: #cc3311;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.green {
+    color: #008000;
+    font-weight: bold;
+    font-size: 18px;   
+}
+
+.navy {
+    color: #000080;
+    font-weight: bold;
+    font-size: 18px;   
+}
+
+.orange {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 18px;   
+}
+
+.purple {
+    color: #800080;
+    font-weight: bold;
+    font-size: 18px;   
+}
+.underline {
+    text-decoration: underline;
+    color: black;
+}
+
+p {
+    color: #444444;
+}
